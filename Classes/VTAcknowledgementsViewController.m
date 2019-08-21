@@ -354,6 +354,7 @@ static const CGFloat VTFooterBottomMargin = 20;
 
     VTAcknowledgement *acknowledgement = self.acknowledgements[indexPath.row];
     cell.textLabel.text = acknowledgement.title;
+    cell.textLabel.textColor = [[NSUserDefaults standardUserDefaults] boolForKey:@"darkMode"] ? [UIColor whiteColor] : [UIColor blackColor];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 
     return cell;
